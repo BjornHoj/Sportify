@@ -1,16 +1,81 @@
 ---
-
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+import Sections from "../components/Sections.astro";
+import CardAlbum from "../components/CardAlbum.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <header>
+    <Header />
+  </header>
+
+  <body>
+    <main>
+      <div class="grid1_3">
+        <div class="left_side grid1_1">
+          <h3>Dit Bibliotek</h3>
+          <Sections>
+            <Button variant="tertiary">Opret playliste</Button>
+          </Sections>
+          <Sections>
+            <Button variant="tertiary">Udforsk podcast</Button>
+          </Sections>
+        </div>
+
+        <div class="kunstnere">
+          <h2>Populære kunstnere</h2>
+          <div class="grid1fr_auto">
+            <Card header="Medina" tekst="Morgenfest">
+              <img src="src/billeder/Millie.jpeg" alt="Millie" />
+            </Card>
+            <Card header="Kim Larsen" tekst="Jutlandia">
+              <img src="src/billeder/Bentley.jpeg" alt="" />
+            </Card>
+            <Card header="Rihanna" tekst="FourFiveSeconds">
+              <img src="src/billeder/RihannaOgPoul.jpeg
+            " alt="" />
+            </Card>
+            <Card header="JayZ" tekst="Swagga">
+              <img src="src/billeder/jayZ.jpeg
+            " alt="" />
+            </Card>
+          </div>
+
+          <div class="albums">
+            <h2>Populær albums</h2>
+            <div class="grid1fr_auto">
+              <CardAlbum header="Alans Top" tekst="Alan Nielsen">
+                <img src="src/billeder/Alan.jpeg
+              " alt="" />
+              </CardAlbum>
+              <CardAlbum header="Michael Jackson" tekst="Thriller">
+                <img src="src/billeder/Michael.jpeg
+              " alt="" />
+              </CardAlbum>
+              <CardAlbum header="Jonas Brother" tekst="Before You Love">
+                <img src="src/billeder/JonasB.jpeg
+              " alt="" />
+              </CardAlbum>
+              <CardAlbum header="Lil Wayne" tekst="Never back down">
+                <img src="src/billeder/LilW.jpeg
+              " alt="" />
+              </CardAlbum>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+
 </html>

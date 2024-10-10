@@ -1,0 +1,56 @@
+body {
+  color: aliceblue;
+  background-color: black;
+}
+
+.grid1_3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 15px;
+}
+
+.left_side {
+  background-color: #3b3b3b;
+  border-radius: 10px;
+  height: 100vh;
+}
+
+.left_side,
+h3 {
+  padding-left: 15px;
+}
+
+.kunstnere {
+  margin-left: 5px;
+  background-color: #3b3b3b;
+  border-radius: 10px;
+}
+
+.kunstnere h2 {
+  margin-left: 10px;
+}
+
+.kunstnere img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Gør billedet rundt */
+  object-fit: cover;
+  margin-bottom: 15px; /* Plads under billedet */
+}
+
+.grid1fr_auto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.albums h2 {
+  margin-top: 45px;
+}
+
+.albums img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}

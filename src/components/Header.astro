@@ -1,0 +1,66 @@
+---
+import Button from "./Button.astro";
+---
+
+<!-- <header>
+  <img class="logo" src="src/billeder/spotify.png" alt="Logo" />
+  <img class="home" src="src/billeder/home.png" alt="Home" />
+  <form action="Søg">
+    <input class="search" type="text" placeholder="Hvad vil du afspille?" />
+     <Button variant="secondary" size="meduim">Tilmed dig</Button>
+    <Button variant="primary" size="meduim">Log på</Button>
+  </form>
+ 
+</header> -->
+<header class="header">
+  <img class="logo" src="src/billeder/spotify.png" alt="Logo" />
+  <div class="left_group">
+    <img class="home" src="src/billeder/home.png" alt="Home" />
+    <form action="Søg">
+      <input class="search" type="text" placeholder="Hvad vil du afspille?" />
+    </form>
+  </div>
+  <div class="right_group">
+    <Button variant="secondary" size="meduim">Tilmed dig</Button>
+    <Button variant="primary" size="meduim">Log på</Button>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .left_group {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 35px;
+  }
+
+  .logo:hover {
+    width: 40px;
+  }
+
+  .home {
+    background-color: aliceblue;
+    width: 45px;
+    border-radius: 30px;
+  }
+
+  .home:hover {
+    width: 50px;
+  }
+
+  .search {
+    border-radius: 50px;
+    background-color: #3b3b3b;
+    padding: 12px 61px 12px 48px;
+    color: antiquewhite;
+  }
+</style>

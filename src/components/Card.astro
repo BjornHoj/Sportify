@@ -1,0 +1,28 @@
+---
+const header = Astro.props.header;
+const tekst = Astro.props.tekst;
+---
+
+<section class="content_section">
+  <slot />
+  <h4>{header}</h4>
+  <p>{tekst}</p>
+</section>
+
+<style>
+  .content_section {
+    padding-left: 10px;
+    margin-top: 20px;
+    object-fit: cover;
+    margin: 0px;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+</style>
